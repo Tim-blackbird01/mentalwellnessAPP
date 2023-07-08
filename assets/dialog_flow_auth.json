@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "mentalhealthandwelness-cosv",
+  "private_key_id": "dd20352b97127e030336a40a9d7a5d34885e93fd",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDZw7rxWFt0mDAB\nrq/6oOvta9ZFVq2/uzUMxx1yzip1iSF/AkjzGFv4K/iVKvi0kQgM8bOBb3cuBiVk\nDNgzXWziHF1ABwHU+RCX08T+JOP9oRLssb3xEb1duNyWGcxqEHO5bbo3qxanv/95\n6yNp/B9/sGYLGBeD6tDLFdlyIY78aqft61OfBevq8cpv/8W3aqIsIRx0pMpuvf2Q\nwDpqTesl7Fk/QrElMsRswF46ZC6iQMIu+6zDYeka0PitvqbO4o9rkXcKrkhZPXB/\n2tknUVMiqR3PI14gLU/hT4JpZZGuNA15PSUwJ1Kk/63Vk5+MgRlGryAEEDyY3ykS\nlCbM+OUhAgMBAAECggEAA01QPZ4fHuS635+oO/bqNOqscFc44b4jNwsi422EX81h\nRGWCuSrupBP4nDxvUn+bfWTB2c3YowpFUV/PfHHnd4NCF7kzeij/qymzJD5ndZ5W\nZN/qFyhzdGMb9yuzeY0/z/k9uF/gA1GqPE1IN3BzAtLoLTVjj+TE3zt41V30Ztfp\nBFhjw7WE2A3Y2AQAIAB6EpmXq+WEaRkvB0vfmTNZ5e+bmbbcCtDqcNMUSrhTQN4B\n3NC5WI8PqPh+HFGb212cCaGpOq3JvnhKTMEd2av14opOPoHQPDhJ2aKWbxvpgpGq\n+iF59cd/GwCb9U1Uhup0xCqHfoCfVFaFr8lgkuAZUQKBgQDttEojhSRisj7N39/Y\nq34BHFlvOhaWW55t0W9kKKUZTZ3grA7pa6N80jB6B+IzDln7Q44kkFEu0m5Exs8b\nU/q4a5bWZKn9sB225tJNL6nQceBbSzY8wIBkyGJ6umlHzmsp0KSnmE1NiwPuK2ea\npslvijW4qzDbzunQzshKlOH9qQKBgQDqhozfcZavx5+gsitad0HQgapeNa07EJZZ\n+fKDrGMs1g0HVjkwNHNTx0CU+DF8hsK3gjx67JGKbGlhMYWOtPDhkHJzvJ4azrnm\nSBnYFNAiR6FWLJTmoUunCyjoE10/gpzj99KfZyytlCn/9he2Q0xzSNwn5wsWF5oE\nAty0i+WmuQKBgQDLEsyH3fZAz1CyZ4GARLpITqTlTjX/zFPkNBm68rJhlJq9V6EB\nr7CjMZqylkucHLWo4ITuHdENdD86SLKlATDgHyJlFOjZT32DRV0DDiZAaxkmRXIX\nosnN0Be6C8lnzCRnO9V/TLE1/v6jmbdQOw86WFQe6Tm7f+DnP9GDTgBnyQKBgQCV\nGkoB3TOSOfYQsnXBpERhja6FCtdBz//m4HQApt6+qK/L1FOzhAU2ZF142HqN0xeE\nl/ZfqHu3Z8lvk4539i2XGsDJOEfEf13NPFXB/Sl+QdAe+2UHY9C3OO8e7QDB2gZp\nISv1UCElkidJpmnY5Nx8BvyBGfEAcKzok/FBkBfHcQKBgQCtCgudH+GKJKDzRoZM\nMElm0jO4FlocRmESj9ArbFoBfpACw5sK7Vdm3caP0cULBldSr+hmsBDr7lenKWhl\nPymisqXm+KS4J7lsmId2gxhjnT2Y7W6nOhO/fklwOz4BtWnIiHYLd07lvY6Lqq2m\nHl1658wDQ0lGr1V2cHK3aMnu1A==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mentalhealth@mentalhealthandwelness-cosv.iam.gserviceaccount.com",
+  "client_id": "108828425975279734913",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mentalhealth%40mentalhealthandwelness-cosv.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
