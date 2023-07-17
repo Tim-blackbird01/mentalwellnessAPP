@@ -264,7 +264,7 @@ class _GoalSettingScreenState extends State<GoalSettingScreen> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/goalhome.png'),
+            image: AssetImage('assets/images/backgroundthree.png'),
             fit: BoxFit.cover,
           ),
         ),
@@ -295,13 +295,13 @@ class _GoalSettingScreenState extends State<GoalSettingScreen> {
                             title: Text(
                               goals[index].goalText,
                               style: const TextStyle(
-                                color: Colors.white,
+                                color: Color.fromARGB(255, 0, 0, 0),
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
                             subtitle: Text(
                               goals[index].reminderText,
-                              style: const TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                             ),
                             trailing: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -311,7 +311,7 @@ class _GoalSettingScreenState extends State<GoalSettingScreen> {
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
-                                    color: Colors.white,
+                                    color: Color.fromARGB(255, 0, 0, 0),
                                   ),
                                 ),
                                 const SizedBox(height: 4),

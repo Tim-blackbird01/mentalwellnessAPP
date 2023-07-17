@@ -21,19 +21,14 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              hexStringToColor("CB2B93"),
-              hexStringToColor("9546C4"),
-              hexStringToColor("5E61F4"),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/background.png"), // Image backround
+            fit: BoxFit.cover,
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: SingleChildScrollView(
             child: Form(
               key: _formKey,
@@ -50,13 +45,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Name',
-                      labelStyle: TextStyle(color: Colors.white),
+                      labelStyle: const TextStyle(color: Colors.white),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      prefixIcon: Icon(Icons.person, color: Colors.white),
+                      prefixIcon: const Icon(Icons.person, color: Colors.white),
                     ),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                     validator: (value) {
                       if (value?.isEmpty ?? true) {
                         return 'Please enter your name';
@@ -69,17 +64,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       });
                     },
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Email',
-                      labelStyle: TextStyle(color: Colors.white),
+                      labelStyle: const TextStyle(color: Colors.white),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      prefixIcon: Icon(Icons.email, color: Colors.white),
+                      prefixIcon: const Icon(Icons.email, color: Colors.white),
                     ),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                     validator: (value) {
                       if (value?.isEmpty ?? true) {
                         return 'Please enter your email';
@@ -92,17 +87,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       });
                     },
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   TextFormField(
                     decoration: InputDecoration(
                       labelText: 'Password',
-                      labelStyle: TextStyle(color: Colors.white),
+                      labelStyle: const TextStyle(color: Colors.white),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(5.0),
                       ),
-                      prefixIcon: Icon(Icons.lock, color: Colors.white),
+                      prefixIcon: const Icon(Icons.lock, color: Colors.white),
                     ),
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                     obscureText: true,
                     validator: (value) {
                       if (value?.isEmpty ?? true) {
@@ -116,7 +111,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       });
                     },
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   ElevatedButton(
                     onPressed: () {
                       if (_formKey.currentState?.validate() ?? false) {
@@ -127,12 +122,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                       primary: Colors.white,
                       onPrimary: Colors.blue,
                     ),
-                    child: Text('Register', style: TextStyle(color: Colors.blue)),
+                    child: const Text('Register', style: TextStyle(color: Colors.blue)),
                   ),
-                  SizedBox(height: 16.0),
+                  const SizedBox(height: 16.0),
                   Text(
                     _error,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 16.0,
                     ),
@@ -145,7 +140,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         MaterialPageRoute(builder: (context) => LoginScreen()),
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Already have an account? Login',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -180,13 +175,5 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         _error = 'Registration failed. Please try again.';
       });
     }
-  }
-
-  Color hexStringToColor(String hexColor) {
-    hexColor = hexColor.toUpperCase().replaceAll("#", "");
-    if (hexColor.length == 6) {
-      hexColor = "FF" + hexColor;
-    }
-    return Color(int.parse(hexColor, radix: 16));
   }
 }

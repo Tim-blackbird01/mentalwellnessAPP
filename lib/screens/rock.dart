@@ -40,7 +40,7 @@ class _RockPaperScissorsGameState extends State<RockPaperScissorsGame> {
         (userChoice == Choice.Scissors && computerChoice == Choice.Paper)) {
       return 'You win!';
     } else {
-      return 'Computer wins!';
+      return 'I win!';
     }
   }
 
@@ -84,7 +84,7 @@ class _RockPaperScissorsGameState extends State<RockPaperScissorsGame> {
             ),
             SizedBox(height: 16),
             Text(
-              'Computer\'s choice: ${_computerChoice?.toString().split('.').last ?? "-"}',
+              'My choice: ${_computerChoice?.toString().split('.').last ?? "-"}',
               style: TextStyle(fontSize: 18),
             ),
             SizedBox(height: 16),

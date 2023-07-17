@@ -48,62 +48,70 @@ class _JournalEntryDetailsScreenState extends State<JournalEntryDetailsScreen> {
       appBar: AppBar(
         title: Text('Journal Entry'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              entryText,
-              style: TextStyle(
-                fontSize: 18.0,
-                fontWeight: FontWeight.bold,
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/backgroundtwo.png"), // Replace with your image path
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                entryText,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            SizedBox(height: 16.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton(
-                  onPressed: () => _editEntry(context).then((_) {
-                    // Refresh entry text after editing
-                    FirebaseFirestore.instance
-                        .collection('entries')
-                        .doc(widget.entryId)
-                        .get()
-                        .then((snapshot) {
-                      final data = snapshot.data();
-                      if (data != null && data['text'] is String) {
-                        setState(() {
-                          entryText = data['text'];
-                        });
-                      }
-                    });
-                  }),
-                  style: ElevatedButton.styleFrom(
-                    primary: Theme.of(context).accentColor,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+              SizedBox(height: 16.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    onPressed: () => _editEntry(context).then((_) {
+                      // Refresh entry text after editing
+                      FirebaseFirestore.instance
+                          .collection('entries')
+                          .doc(widget.entryId)
+                          .get()
+                          .then((snapshot) {
+                        final data = snapshot.data();
+                        if (data != null && data['text'] is String) {
+                          setState(() {
+                            entryText = data['text'];
+                          });
+                        }
+                      });
+                    }),
+                    style: ElevatedButton.styleFrom(
+                      primary: Theme.of(context).accentColor,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                     ),
+                    child: Text('Edit'),
                   ),
-                  child: Text('Edit'),
-                ),
-                SizedBox(width: 16.0),
-                ElevatedButton(
-                  onPressed: () async {
-                    await _deleteEntry(context);
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.red,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                  SizedBox(width: 16.0),
+                  ElevatedButton(
+                    onPressed: () async {
+                      await _deleteEntry(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
                     ),
+                    child: Text('Delete'),
                   ),
-                  child: Text('Delete'),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

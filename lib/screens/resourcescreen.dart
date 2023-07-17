@@ -37,18 +37,26 @@ class _MentalHealthReadingScreenState extends State<MentalHealthReadingScreen> {
       appBar: AppBar(
         title: Text('Mental Health Reading Material'),
       ),
-      body: ListView.builder(
-        itemCount: _readingMaterials.length,
-        itemBuilder: (context, index) {
-          final material = _readingMaterials[index];
-          return ListTile(
-            title: Text(material.title),
-            subtitle: Text(material.description),
-            onTap: () {
-              _navigateToReadingMaterial(material);
-            },
-          );
-        },
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/backgroundtwo.png"), // Replace with your image path
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: ListView.builder(
+          itemCount: _readingMaterials.length,
+          itemBuilder: (context, index) {
+            final material = _readingMaterials[index];
+            return ListTile(
+              title: Text(material.title),
+              subtitle: Text(material.description),
+              onTap: () {
+                _navigateToReadingMaterial(material);
+              },
+            );
+          },
+        ),
       ),
     );
   }

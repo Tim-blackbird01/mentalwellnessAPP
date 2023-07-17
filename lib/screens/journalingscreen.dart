@@ -55,7 +55,7 @@ class _JournalingScreenState extends State<JournalingScreen> {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/goalhome.png"), // Replace with your background image path
+              image: AssetImage("assets/images/backgroundtwo.png"), // Replace with your background image path
               fit: BoxFit.cover,
             ),
           ),

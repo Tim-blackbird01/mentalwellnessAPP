@@ -21,14 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              hexStringToColor("CB2B93"),
-              hexStringToColor("9546C4"),
-              hexStringToColor("5E61F4"),
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+          image: DecorationImage(
+            image: AssetImage("assets/images/background.png"), // Replace with your image path
+            fit: BoxFit.cover,
           ),
         ),
         child: Padding(
@@ -43,7 +38,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     'assets/images/logo.png',
                     width: 150,
                     height: 150,
-                    color: Colors.white,
+                    color: Color.fromARGB(255, 5, 0, 0),
                   ),
                   const SizedBox(height: 24),
                   TextFormField(
@@ -148,13 +143,5 @@ class _LoginScreenState extends State<LoginScreen> {
         _error = 'Login failed. Please try again.';
       });
     }
-  }
-
-  Color hexStringToColor(String hexColor) {
-    hexColor = hexColor.toUpperCase().replaceAll("#", "");
-    if (hexColor.length == 6) {
-      hexColor = "FF" + hexColor;
-    }
-    return Color(int.parse(hexColor, radix: 16));
   }
 }

@@ -12,17 +12,17 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: const Text('Home'),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/background.png'),
             fit: BoxFit.cover,
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: GridView.count(
             crossAxisCount: 2,
             crossAxisSpacing: 16.0,
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   // Handle chatbox feature onTap
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => ChatScreen()),
+                    MaterialPageRoute(builder: (context) => const ChatScreen()),
                   );
                 },
               ),
@@ -126,14 +126,14 @@ class FeatureCard extends StatelessWidget {
         splashColor: Colors.blue, // Customize the splash color on tap
         borderRadius: BorderRadius.circular(8.0), // Add border radius to the InkWell
         child: Container(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 34, 99, 124), // Customize the card's background color
+            color: const Color.fromARGB(255, 34, 99, 124), // Customize the card's background color
             borderRadius: BorderRadius.circular(8.0), // Add border radius to the card
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.2),
-                offset: Offset(0, 2),
+                offset: const Offset(0, 2),
                 blurRadius: 4.0,
               ),
             ],
@@ -146,10 +146,10 @@ class FeatureCard extends StatelessWidget {
                 width: 48.0,
                 height: 48.0,
               ),
-              SizedBox(height: 8.0),
+              const SizedBox(height: 8.0),
               Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16.0,
                   fontWeight: FontWeight.bold,
                   color: Colors.white, // Customize the text color

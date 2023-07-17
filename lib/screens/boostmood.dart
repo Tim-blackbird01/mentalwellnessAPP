@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'HangmanGame.dart';
 import 'affirmation.dart';
 import 'musicscreen.dart'; // Import your music screen file here
 import 'rock.dart';
@@ -29,7 +28,7 @@ class GameScreen extends StatelessWidget {
                 children: [
                   GameIcon(
                     icon: Icons.gamepad,
-                    label: 'Game 1',
+                    label: 'Memorygame',
                     onTap: () {
                       Navigator.push(
                         context,
@@ -40,7 +39,7 @@ class GameScreen extends StatelessWidget {
                   ),
                   GameIcon(
                     icon: Icons.sports_esports,
-                    label: 'Game 2',
+                    label: 'TicTacToe',
                     onTap: () {
                       // Open Game 2
                       Navigator.push(
@@ -49,20 +48,10 @@ class GameScreen extends StatelessWidget {
                       );
                     },
                   ),
-                  GameIcon(
-                    icon: Icons.casino,
-                    label: 'Game 3',
-                    onTap: () {
-                      // Open Game 3
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => HangmanGame()),
-                      );
-                    },
-                  ),
+                  
                   GameIcon(
                     icon: Icons.support_rounded,
-                    label: 'Game 4',
+                    label: 'Rockpaperscissors',
                     onTap: () {
                       // Open Game 4
                       Navigator.push(
