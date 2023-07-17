@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'boostmood.dart';
-import 'chat_screen.dart';
 import 'communitysupportscreen.dart';
 import 'goalscreen.dart';
 import 'journalingscreen.dart';
+import 'openai.dart';
 import 'resourcescreen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -35,7 +35,7 @@ class HomeScreen extends StatelessWidget {
                   // Handle chatbox feature onTap
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ChatScreen()),
+                    MaterialPageRoute(builder: (context) => ChatScreen()),
                   );
                 },
               ),

@@ -45,8 +45,7 @@ class _JournalingScreenState extends State<JournalingScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: const Color(0xFFABCDEF), // Tranquil blue
-        accentColor: const Color(0xFF88CC99), // Calming green
+        primaryColor: const Color(0xFFABCDEF), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: const Color(0xFF88CC99)), // Calming green
       ),
       home: Scaffold(
         appBar: AppBar(
@@ -103,7 +102,7 @@ class _JournalingScreenState extends State<JournalingScreen> {
                                 );
                               },
                               style: ElevatedButton.styleFrom(
-                                primary: Theme.of(context).accentColor,
+                                primary: Theme.of(context).colorScheme.secondary,
                                 shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
@@ -146,7 +145,7 @@ class _JournalingScreenState extends State<JournalingScreen> {
                           child: Container(
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: Theme.of(context).accentColor, // Border color
+                                color: Theme.of(context).colorScheme.secondary, // Border color
                                 width: 1.0, // Border width
                               ),
                               borderRadius: BorderRadius.circular(10.0), // Border radius

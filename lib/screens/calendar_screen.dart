@@ -86,7 +86,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
                         child: Container(
                           decoration: BoxDecoration(
                             border: Border.all(
-                              color: Theme.of(context).accentColor,
+                              color: Theme.of(context).colorScheme.secondary,
                               width: 1.0,
                             ),
                             borderRadius: BorderRadius.circular(10.0),

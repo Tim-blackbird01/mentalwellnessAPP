@@ -17,8 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primaryColor: Color(0xFFABCDEF), // Tranquil blue
-        accentColor: Color(0xFF88CC99), // Calming green
+        primaryColor: Color(0xFFABCDEF), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFF88CC99)), // Calming green
         // Other theme properties
       ),
       home: RegistrationScreen(),

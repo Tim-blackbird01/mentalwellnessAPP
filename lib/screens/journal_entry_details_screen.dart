@@ -88,7 +88,7 @@ class _JournalEntryDetailsScreenState extends State<JournalEntryDetailsScreen> {
                       });
                     }),
                     style: ElevatedButton.styleFrom(
-                      primary: Theme.of(context).accentColor,
+                      backgroundColor: Theme.of(context).colorScheme.secondary,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),

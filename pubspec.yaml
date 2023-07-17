@@ -48,9 +48,13 @@ dependencies:
   dialog_flowtter: ^0.3.3
   http: ^0.13.4
   flutter_dotenv: ^5.0.1
-  flutter_config: ^1.0.0
   audioplayers: ^4.1.0
   flutter_sound: ^9.2.13
+  json_annotation: ^4.8.1
+  openai_api: ^0.0.7+2
+  openai_client: ^0.0.7
+  dart_openai: ^3.0.0
+  flutter_config: ^2.0.2
 
 dev_dependencies:
   flutter_test:
